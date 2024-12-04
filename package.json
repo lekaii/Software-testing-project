@@ -5,8 +5,8 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "mocha",
-    "coverage": "c8 mocha"
+    "test": "mocha --reporter spec",
+    "test-coverage": "c8 mocha --reporter spec"
   },
   "author": "",
   "license": "MIT",
