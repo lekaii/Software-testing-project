@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "test": "mocha --reporter spec",
-    "test-coverage": "c8 mocha --reporter spec"
+    "test-coverage": "c8 --reporter=lcov --reporter=text --coverage-dir=coverage npm test"
   },
   "author": "",
   "license": "MIT",
@@ -15,5 +15,8 @@
     "chai": "^5.1.2",
     "esm": "^3.2.25",
     "mocha": "^11.0.1"
+  },
+  "dependencies": {
+    "coveralls": "^3.1.1"
   }
 }
