@@ -23,7 +23,7 @@ describe('toString', () => {
 
   it('should convert arrays to comma-separated strings', () => {
     expect(toString([1, 2, 3])).to.equal('1,2,3');
-    expect(toString([null, undefined, 4])).to.equal(',,,4');
+    expect(toString([null, undefined, 4])).to.equal(',,4');
   });
 
   it('should handle nested arrays correctly', () => {
