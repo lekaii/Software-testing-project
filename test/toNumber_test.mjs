@@ -40,6 +40,11 @@ describe('toNumber', function() {
                 expect(result).to.equal(31);
             });
 
+            it('should return a number for an octal string', function() {
+                const result = toNumber('0o77');
+                expect(result).to.equal(63);
+            });
+
             it('should return the number for a number string with whitespace', function() {
                 const result = toNumber('  2  ');
                 expect(result).to.equal(2);
@@ -48,6 +53,16 @@ describe('toNumber', function() {
             it('should return the number from an object with a custom valueOf method', function() {
                 const obj = { valueOf: () => 42 };
                 expect(toNumber(obj)).to.equal(42);
+            });
+
+            it('should return 1 for boolean true', function() {
+                const result = toNumber(true);
+                expect(result).to.equal(1);
+            });
+
+            it('should return 0 for boolean false', function() {
+                const result = toNumber(false);
+                expect(result).to.equal(0);
             });
     });
 
