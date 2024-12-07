@@ -97,5 +97,10 @@ describe('toNumber', function() {
             const result = toNumber(NaN);
             expect(result).to.be.NaN;
         });
+
+        it('should return NaN for a bad hexadecimal string', function() {
+            const result = toNumber('-0x123');
+            expect(result).to.be.NaN;
+        });
     });
 });
